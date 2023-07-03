@@ -1,5 +1,6 @@
 import 'server-only'
 async function getData() {
+  console.log('getData');
   const res = await fetch('https://cat-fact.herokuapp.com/facts/')
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
