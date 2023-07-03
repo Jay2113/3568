@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 export default function ShowCatFacts({children}: { children: React.ReactNode }) {
   const [show, setShow] = useState(false);
-
+  console.log('nikos showCatFacts');
   return (
     <div>
       <button onClick={ () => {

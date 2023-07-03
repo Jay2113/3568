@@ -1,6 +1,6 @@
 import 'server-only'
 async function getData() {
-  console.log('getData');
+  console.log('nikos getData');
   const res = await fetch('https://cat-fact.herokuapp.com/facts/')
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -16,7 +16,7 @@ async function getData() {
 
 export default async function GetCatFacts() {
   const data = await getData()
-
+  console.log('nikos getData outer');
   return <main>
     <div>{data.map((fact: { _id: string, text: string }) => {
       return <li key={fact._id}>{fact.text}</li>;
